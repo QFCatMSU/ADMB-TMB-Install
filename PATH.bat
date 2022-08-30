@@ -2,6 +2,9 @@
 :: PATH_v6-5.bat by Charlie Belinsky 
 :: 8/29/22
 
+:: 6-6 Changes
+:: Add mingw to Path in emacs
+
 :: 6-5 Changes
 :: include admb2r.cpp in the installation -- gets added to the include folder in ADMB
 
