@@ -1,0 +1,2 @@
+Added horizontal scrollbar (.emacs)
+Fixed issue where Emacs on Mac could not access files in GUI mode (.emacs)
