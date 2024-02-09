@@ -1,6 +1,9 @@
 ::@echo off
-:: PATH_v6-5.bat by Charlie Belinsky 
-:: 8/29/22
+:: PATH.bat by Charlie Belinsky 
+:: version 6: 8/29/22
+
+:: 6-7 Changes (2/9/24)
+:: Removed path associations -- they do not work in Win 11
 
 :: 6-6 Changes
 :: Add mingw to Path in emacs
@@ -131,15 +134,15 @@ xcopy "%~dp0\admb2r.cpp" "%ADMB_FOLDER%\include\" /h /i /c /k /e /r /y
 xcopy "%~dp0\admb2r.cpp" "%ADMB_FOLDER%\include\contrib\" /h /i /c /k /e /r /y
 
 :: make Emacs the default program to open tpl files
-assoc .tpl=tplfile
-ftype tplfile=C:\Program Files\Emacs\x86_64\bin\runemacs.exe "%1"
+::assoc .tpl=tplfile
+::ftype tplfile=C:\Program Files\Emacs\x86_64\bin\runemacs.exe "%1"
 
 :: where to remove file extension in Reg Editor
 ::   Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts
 ::set /p "CPPEmacs=Do you want CPP files to open in Emacs?: "
 ::if NOT "%CPPEmacs%"=="yes" goto :nocpp 
-assoc .cpp=cppfile
-ftype cppfile=C:\Program Files\Emacs\x86_64\bin\runemacs.exe "%1"
+::assoc .cpp=cppfile
+::ftype cppfile=C:\Program Files\Emacs\x86_64\bin\runemacs.exe "%1"
 
 ::User hits button to exit (so we can view the progress)
 pause
